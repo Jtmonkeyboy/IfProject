@@ -17,6 +17,7 @@ public class Piano
 	{
 		this.name = "El Piano";
 		this.color = "Black";
+		this.isMovable = false;
 		this.hasStrings = true;
 		this.keys = 88;
 	}
