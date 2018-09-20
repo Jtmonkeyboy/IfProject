@@ -31,4 +31,53 @@ public class Piano
 		this.hasStrings = hasStrings;
 		this.keys = keys;
 	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public String getColor()
+	{
+		return color;
+	}
+	
+	public boolean getIsMovable()
+	{
+		return isMovable;
+	}
+	
+	public boolean getHasStrings()
+	{
+		return hasStrings;
+	}
+	
+	public int getkeys()
+	{
+		return keys;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setColor(String color)
+	{
+		this.color = color;
+	}
+	
+	public void setIsMovable(boolean isMovable)
+	{
+		this.isMovable = isMovable;
+	}
+	
+	public void setHasStrings(boolean hasStrings)
+	{
+		this.hasStrings = hasStrings;
+	}
+	public void setKeys(int keys)
+	{
+		this.keys = keys;
+	}
 }
