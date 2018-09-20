@@ -4,7 +4,7 @@ public class Piano
 {
 	private String name;
 	private String color;
-	private boolean isMovable;
+	private boolean hasWheels;
 	private boolean hasStrings;
 	private int keys;
 	
@@ -16,18 +16,18 @@ public class Piano
 	public Piano()
 	{
 		this.name = "El Piano";
-		this.color = "Black";
-		this.isMovable = false;
+		this.color = "black";
+		this.hasWheels = false;
 		this.hasStrings = true;
 		this.keys = 88;
 	}
 	
-	public Piano(String name, String color, boolean isMovable, boolean hasStrings, int keys)
+	public Piano(String name, String color, boolean hasWheels, boolean hasStrings, int keys)
 	{
 		
 		this.name = name;
 		this.color = color;
-		this.isMovable = isMovable;
+		this.hasWheels = hasWheels;
 		this.hasStrings = hasStrings;
 		this.keys = keys;
 	}
@@ -42,9 +42,9 @@ public class Piano
 		return color;
 	}
 	
-	public boolean getIsMovable()
+	public boolean getHasWheels()
 	{
-		return isMovable;
+		return hasWheels;
 	}
 	
 	public boolean getHasStrings()
@@ -67,9 +67,9 @@ public class Piano
 		this.color = color;
 	}
 	
-	public void setIsMovable(boolean isMovable)
+	public void setIsMovable(boolean hasWheels)
 	{
-		this.isMovable = isMovable;
+		this.hasWheels = hasWheels;
 	}
 	
 	public void setHasStrings(boolean hasStrings)
@@ -79,5 +79,14 @@ public class Piano
 	public void setKeys(int keys)
 	{
 		this.keys = keys;
+	}
+	
+	public String toString()
+	{
+		String description = "My piano's name is " + name + ".\n"
+				+ "The color is " + color + " and it has strings.\n"
+				+ "The piano does not have wheels.\n"
+				+ "My piano has about " + keys + " keys.";
+		return description;
 	}
 }
