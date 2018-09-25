@@ -67,7 +67,7 @@ public class Piano
 		this.color = color;
 	}
 	
-	public void setIsMovable(boolean hasWheels)
+	public void setHasWheels(boolean hasWheels)
 	{
 		this.hasWheels = hasWheels;
 	}

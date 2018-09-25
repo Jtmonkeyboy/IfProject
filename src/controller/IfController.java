@@ -26,13 +26,31 @@ public class IfController
 		String name = JOptionPane.showInputDialog(null,"What is the name of your piano?");
 		userPiano.setName(name);
 		
+		String color = JOptionPane.showInputDialog(null, String.format("What is the color of %s?", name));
+		userPiano.setColor(color);
+		
+		String hasWheels = JOptionPane.showInputDialog(null, String.format("True or false?\nDoes %s have wheels?", name));
+		userPiano.setHasWheels(Boolean.parseBoolean(hasWheels.toLowerCase()));
+		
+		String hasStrings = JOptionPane.showInputDialog(null, String.format("True or false?\nIs %s an electic piano?", name));
+		userPiano.setHasStrings(Boolean.parseBoolean(hasStrings.toLowerCase()));
+		
+		String keys = JOptionPane.showInputDialog(null, String.format("How many keys does %s have?", name));
+		while(!validInt(keys))
+		{
+			keys = JOptionPane.showInputDialog(null, String.format("Try again!\nHow many keys does %s have?", name));
+		}
+		userPiano.setKeys(Integer.parseInt(keys));
+		
 		loopy();
 	}
 	private void loopy()
 	{
 		//have to define a variable before the loop.
 		boolean isFinished = false;
-		int someCount = 1;
+		int someCount = 0;
+		Piano yourThing = new Piano();
+		
 		while (!isFinished)
 		{
 			JOptionPane.showMessageDialog(null, "annoy everyone!!!!\n" + someCount);
@@ -42,5 +60,27 @@ public class IfController
 				isFinished = true;
 			}
 		}
+		
+		for (int index = 0; index < 10; index++)
+		{
+			JOptionPane.showMessageDialog(null, "This is execution number\n" + index);
+		}
+	}
+	
+	public boolean validInt(String sample)
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Integer.parseInt(sample);
+			isValid = true;
+		}
+		
+		catch(NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "This variable has to be an integer.");
+		}
+		return isValid;
 	}
 }
