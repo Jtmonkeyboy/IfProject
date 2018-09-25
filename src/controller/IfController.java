@@ -25,5 +25,22 @@ public class IfController
 		JOptionPane.showMessageDialog(null, myPiano);
 		String name = JOptionPane.showInputDialog(null,"What is the name of your piano?");
 		userPiano.setName(name);
+		
+		loopy();
+	}
+	private void loopy()
+	{
+		//have to define a variable before the loop.
+		boolean isFinished = false;
+		int someCount = 1;
+		while (!isFinished)
+		{
+			JOptionPane.showMessageDialog(null, "annoy everyone!!!!\n" + someCount);
+			someCount += 1;
+			if(someCount > 10)
+			{
+				isFinished = true;
+			}
+		}
 	}
 }
