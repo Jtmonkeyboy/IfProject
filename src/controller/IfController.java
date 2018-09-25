@@ -65,6 +65,25 @@ public class IfController
 		{
 			JOptionPane.showMessageDialog(null, "This is execution number\n" + index);
 		}
+		
+		isFinished = false;
+		while (!isFinished)
+		{
+			String fruitLoop = JOptionPane.showInputDialog(null, "Do you want a fruit loop?");
+			if(fruitLoop.toLowerCase().equals("yes"))
+			{
+				JOptionPane.showMessageDialog(null, "Correct!!");
+				isFinished = true;
+			}
+			else if (fruitLoop.toLowerCase().equals("kill me"))
+			{
+				JOptionPane.showMessageDialog(null, "It will happen some day so why not now...");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "WRONG!");
+			}
+		}
 	}
 	
 	public boolean validInt(String sample)
