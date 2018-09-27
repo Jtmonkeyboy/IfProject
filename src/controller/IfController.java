@@ -21,8 +21,11 @@ public class IfController
 	 */
 	public void start()
 	{
-		
 		JOptionPane.showMessageDialog(null, myPiano);
+		loopy();
+	}
+	private void questions()
+	{
 		String name = JOptionPane.showInputDialog(null,"What is the name of your piano?");
 		userPiano.setName(name);
 		
@@ -74,8 +77,6 @@ public class IfController
 			keys = JOptionPane.showInputDialog(null, String.format("Try again!\nHow many keys does %s have?", name));
 		}
 		userPiano.setKeys(Integer.parseInt(keys));
-		
-		loopy();
 	}
 	private void loopy()
 	{
@@ -83,6 +84,11 @@ public class IfController
 		boolean isFinished = false;
 		int someCount = 0;
 		Piano yourThing = new Piano();
+		
+		for(int loop = 0; loop <= 3; loop += 1)
+		{
+			questions();
+		}
 		
 		while (!isFinished)
 		{

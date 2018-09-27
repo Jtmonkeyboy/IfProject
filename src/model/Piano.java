@@ -83,9 +83,10 @@ public class Piano
 	
 	public String toString()
 	{
-		String description = "My piano's name is " + name + ".\n"
+		String description = "The piano's name is " + name + ".\n"
 				+ "The color is " + color + " and it has strings.\n"
 				+ "The piano does not have wheels.\n"
+				+ "it is not electic\n"
 				+ "My piano has about " + keys + " keys.";
 		return description;
 	}
