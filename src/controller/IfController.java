@@ -29,10 +29,43 @@ public class IfController
 		String color = JOptionPane.showInputDialog(null, String.format("What is the color of %s?", name));
 		userPiano.setColor(color);
 		
-		String hasWheels = JOptionPane.showInputDialog(null, String.format("True or false?\nDoes %s have wheels?", name));
+		String hasWheels = JOptionPane.showInputDialog(null, String.format("Does %s have wheels?", name));
+		boolean correct = false;
+		while(!correct)
+		{
+			if(hasWheels.toLowerCase().equals("true") || hasWheels.toLowerCase().equals("yes"))
+			{
+				correct = true;
+			}
+			else if(hasWheels.toLowerCase().equals("false") || hasWheels.toLowerCase().equals("no"))
+			{
+				correct = true;
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Your answer can only be yes/no or true/false.");
+				hasWheels = JOptionPane.showInputDialog(null, String.format("Does %s have wheels?", name));
+			}
+		}
 		userPiano.setHasWheels(Boolean.parseBoolean(hasWheels.toLowerCase()));
 		
-		String hasStrings = JOptionPane.showInputDialog(null, String.format("True or false?\nIs %s an electic piano?", name));
+		String hasStrings = JOptionPane.showInputDialog(null, String.format("Is %s an electic piano?", name));
+		while(!correct)
+		{
+			if(hasStrings.toLowerCase().equals("true") || hasStrings.toLowerCase().equals("yes"))
+			{
+				correct = true;
+			}
+			else if(hasStrings.toLowerCase().equals("false") || hasStrings.toLowerCase().equals("no"))
+			{
+				correct = true;
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "Your answer can only be yes/no or true/false.");
+				hasStrings = JOptionPane.showInputDialog(null, String.format("Is %s an electric piano?", name));
+			}
+		}
 		userPiano.setHasStrings(Boolean.parseBoolean(hasStrings.toLowerCase()));
 		
 		String keys = JOptionPane.showInputDialog(null, String.format("How many keys does %s have?", name));
@@ -75,13 +108,31 @@ public class IfController
 				JOptionPane.showMessageDialog(null, "Correct!!");
 				isFinished = true;
 			}
-			else if (fruitLoop.toLowerCase().equals("kill me"))
+			else if(fruitLoop.toLowerCase().equals("kill me"))
 			{
 				JOptionPane.showMessageDialog(null, "It will happen some day so why not now...");
 			}
 			else
 			{
 				JOptionPane.showMessageDialog(null, "WRONG!");
+			}
+		}
+		isFinished = false;
+		while(isFinished)
+		{
+			String egg = JOptionPane.showInputDialog(null, "Can you complete the easter egg?");
+			if(egg.toLowerCase().equals("zombies"))
+			{
+				JOptionPane.showMessageDialog(null, "A wise man once said, 'If I run out of ammunition I will have to resort to STABBING!!!'");
+			}
+			else if(egg.toLowerCase().equals("i can feel it"))
+			{
+				JOptionPane.showMessageDialog(null, "CAN YOU FEEL IT MR. KRABS?");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "NOPE!!");
+				isFinished = true;
 			}
 		}
 	}
