@@ -92,7 +92,7 @@ public class IfController
 		
 		while (!isFinished)
 		{
-			JOptionPane.showMessageDialog(null, "annoy everyone!!!!\n" + someCount);
+			JOptionPane.showMessageDialog(null, "Annoy everyone!!!!\n" + someCount);
 			someCount += 1;
 			if(someCount > 10)
 			{
@@ -129,7 +129,8 @@ public class IfController
 			String egg = JOptionPane.showInputDialog(null, "Can you complete the easter egg?");
 			if(egg.toLowerCase().equals("zombies"))
 			{
-				JOptionPane.showMessageDialog(null, "A wise man once said, 'If I run out of ammunition I will have to resort to STABBING!!!'");
+				String round = JOptionPane.showInputDialog(null, "What is your highest round in zombies?");
+				
 			}
 			else if(egg.toLowerCase().equals("i can feel it"))
 			{
