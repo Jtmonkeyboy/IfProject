@@ -130,7 +130,18 @@ public class IfController
 			if(egg.toLowerCase().equals("zombies"))
 			{
 				String round = JOptionPane.showInputDialog(null, "What is your highest round in zombies?");
-				
+				while(!validInt(round))
+				{
+					round = JOptionPane.showInputDialog(null, "Your answer has to be an integer.");
+				}
+				if(Integer.parseInt(round) >= 30)
+				{
+					JOptionPane.showMessageDialog(null, "");
+				}
+				if(Integer.parseInt(round) < 30)
+				{
+					
+				}
 			}
 			else if(egg.toLowerCase().equals("i can feel it"))
 			{
