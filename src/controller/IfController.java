@@ -1,6 +1,9 @@
 package controller;
 
 import model.Piano;
+
+import java.util.ArrayList;
+
 import javax.swing.JOptionPane;
 
 public class IfController
@@ -22,8 +25,68 @@ public class IfController
 	public void start()
 	{
 		JOptionPane.showMessageDialog(null, myPiano);
+		list();
+		piano();
 		loopy();
 	}
+	
+	private void list()
+	{
+		ArrayList<String> friendList = new ArrayList<String>();
+		
+		friendList.add("Sarajane");
+		friendList.add("Drew");
+		friendList.add("Ben");
+		friendList.add("Caleb");
+		
+		for (int index = 0; index < friendList.size(); index += 1)
+		{
+			String name = friendList.get(index);
+			if(name.equals("Sarajane"))
+			{
+				JOptionPane.showMessageDialog(null, "This is my best friend, " + name + ".");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "This is my friend, " + name + ".");
+			}
+		}
+	}
+	
+	private void piano()
+	{
+		ArrayList<Piano> pianoList = new ArrayList<Piano>();
+		
+		Piano samplePiano = new Piano();
+		Piano otherPiano = new Piano();
+		
+		pianoList.add(samplePiano);
+		pianoList.add(samplePiano);
+		pianoList.add(otherPiano);
+		
+		//Standard forward loop.
+		for (int index = 0; index < pianoList.size(); index += 1)
+		{
+			JOptionPane.showMessageDialog(null, myPiano.getName());
+			
+			Piano currentPiano = myPiano;
+			currentPiano.setName("The new name is " + index + " run");
+			
+		}
+		
+		//Standard backward loop
+		for (int index = pianoList.size() - 1; index >= 0; index -= 1)
+		{
+			
+		}
+		
+		for(Piano current : pianoList)
+		{
+			JOptionPane.showMessageDialog(null, "The piano is named: " + current.getName());
+		}
+		
+	}
+	
 	private void questions()
 	{
 		String name = JOptionPane.showInputDialog(null,"What is the name of your piano?");
@@ -136,11 +199,11 @@ public class IfController
 				}
 				if(Integer.parseInt(round) >= 30)
 				{
-					JOptionPane.showMessageDialog(null, "");
+					JOptionPane.showMessageDialog(null, "Wow! That is awesome! my highest is 52.");
 				}
 				if(Integer.parseInt(round) < 30)
 				{
-					
+					JOptionPane.showMessageDialog(null, "I've done better.");
 				}
 			}
 			else if(egg.toLowerCase().equals("i can feel it"))
