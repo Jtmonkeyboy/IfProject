@@ -35,9 +35,11 @@ public class IfController
 		ArrayList<String> friendList = new ArrayList<String>();
 		
 		friendList.add("Sarajane");
-		friendList.add("Drew");
+		friendList.add("Nick");
+		friendList.add(1, "Drew");
 		friendList.add("Ben");
 		friendList.add("Caleb");
+		friendList.add("Zak");
 		
 		for (int index = 0; index < friendList.size(); index += 1)
 		{
