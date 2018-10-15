@@ -34,6 +34,7 @@ public class IfController
 	{
 		ArrayList<String> friendList = new ArrayList<String>();
 		
+		//This is where I add items to my list. I used .add
 		friendList.add("Sarajane");
 		friendList.add("Nick");
 		friendList.add(1, "Drew");
@@ -41,10 +42,17 @@ public class IfController
 		friendList.add("Caleb");
 		friendList.add("Zak");
 		
+		String table = "";
+		/*
+		 * This is my for loop. It is a forward for loop.
+		 * In the for loop I made 'if' statements to say whether or not that person is my best friend or not
+		 */
 		for (int index = 0; index < friendList.size(); index += 1)
 		{
+			table += (index + 1)  + ".\t" + friendList.get(index) + "\n";
+			
 			String name = friendList.get(index);
-			if(name.equals("Sarajane"))
+			if(name.equals("Sarajane") || name.equals("Drew"))
 			{
 				JOptionPane.showMessageDialog(null, "This is my best friend, " + name + ".");
 			}
@@ -53,6 +61,8 @@ public class IfController
 				JOptionPane.showMessageDialog(null, "This is my friend, " + name + ".");
 			}
 		}
+		//This is where I print/call the empty variable after I put multiple things in it with the power of the for loop.
+		JOptionPane.showMessageDialog(null, table);
 	}
 	
 	private void piano()
