@@ -52,7 +52,7 @@ public class IfController
 			table += (index + 1)  + ".\t" + friendList.get(index) + "\n";
 			
 			String name = friendList.get(index);
-			if(name.equals("Sarajane") || name.equals("Drew"))
+			if(name.equals("Sarajane"))
 			{
 				JOptionPane.showMessageDialog(null, "This is my best friend, " + name + ".");
 			}
